@@ -1,8 +1,7 @@
 <script setup>
-import Menu from './Menu.vue';
-import Content from './Content.vue'
-import { inject, ref } from 'vue';
-import NavBar from './NavBar.vue';
+import SideBar from './components/SideBar.vue';
+import { ref } from 'vue';
+import TopNavBar from './components/TopNavBar.vue';
 
 const sidebarOpen = ref(true)
 
@@ -13,20 +12,21 @@ const handleDiscloserButtonClick = (value) => {
 
 </script>
 <template>
-  <div class="flex" :class="{'ico-mode' : !sidebarOpen }">
+  <div class="flex bg-stone-300" :class="{'ico-mode' : !sidebarOpen }">
     <!--  -->
-      <div  class="fixed transform duration-300 w-64 bg-stone-300 h-screen overflow-y-auto" 
-      :class="sidebarOpen ? 'translate-x-0' : '-translate-x-[12rem]'"
-      >
-        <Menu :ico-mode="!sidebarOpen" />
-      </div>
+    <SideBar class="block" :side-bar-open="sidebarOpen"></SideBar>
      
-      <!--  -->
-    <div class="flex-1 bg-stone-50 transition-margin ease-in-out duration-300" :class="sidebarOpen ? 'ml-[256px]' : 'ml-10'">
-      <NavBar @open="handleDiscloserButtonClick"></NavBar>
-      <div class="p-10">
-        <Content/>
-      </div>      
+    <!-- No mobile o menu tipo icone deve ser ativado, mostra o mesmo menu no mobile -->
+    <!--  -->
+    <div class="flex-1 bg-stone-50 transition-margin ease-in-out duration-300" 
+        :class="sidebarOpen ? 'md:ml-[256px] lg:ml-[256px] ml-[10rem]' : 'ml-0 lg:ml-[3.6rem] md:ml-[3.6rem]'"
+    >
+      <TopNavBar class="w-full fixed z-40" @open="handleDiscloserButtonClick"></TopNavBar>
+
+      <section class="p-10">
+        <router-view></router-view>
+      </section>
+
     </div>
   </div>
 </template>

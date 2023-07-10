@@ -1,8 +1,5 @@
 <template>
     <div id="icons-wrapper">
-
-
-
     <section class="w-full max-w-lg" id="arrows">
       <h2 class="w-full max-w-lg float-left mt-10">Arrows</h2>
         <div class="">
@@ -10,7 +7,7 @@
             <div class="px-6 py-4 ">
                 <p class="inline-block text-center px-3 py-1 text-sm font-semibold text-gray-700 mr-2" >
                     <i class="icon arrows-1_cloud-download-93"></i>
-                </p>
+                </p><i class="icon mr-5 ui-1_bell-53" ></i>
                 <p class="text-xs inline-block px-3 py-1 font-semibold text-gray-700 mr-2" >
                     arrows-1_cloud-download-93
                 </p>

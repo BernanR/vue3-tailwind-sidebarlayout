@@ -1,23 +1,21 @@
 <template>
     <Disclosure as="nav" class="bg-stone-100 border-b border-stone-200" v-slot="{ open }">
-      <div class="mx-auto px-2 sm:px-6 lg:px-8 ">
+      <div class="mx-auto w-full px-0 bg-stone-200 ">
         <div class="relative flex h-16 items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center">
             <!-- Mobile menu button-->
+            <!-- web button -->
             <DisclosureButton @click="handleDisclosureButtonClick(open)" class="inline-flex items-center justify-center rounded-md p-2 text-stone-950 hover:bg-stone-600 hover:text-stone-50">
               <span class="sr-only">Open main menu</span>
-              <Bars3Icon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
-              <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" />
+              <Bars3Icon v-if="!open" class="hidden md:block lg:block h-6 w-6" aria-hidden="true" />
+              <XMarkIcon v-else class="hidden md:block lg:block h-6 w-6" aria-hidden="true" />
+
+              <!-- mobile only -->
+              <Bars3Icon v-if="open" class="block md:hidden lg:hidden h-6 w-6" aria-hidden="true" />
+              <XMarkIcon v-else class="block md:hidden lg:hidden h-6 w-6" aria-hidden="true" />
             </DisclosureButton>
           </div>
-          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <!-- <button @click="sidebarOpen = !sidebarOpen" class="top-5 right-5 text-white px-4 py-2" :class="{ 'Close' : sidebarOpen }">      
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-            </button>            -->
-          </div>
-          <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div style="position: absolute; right: 0;" class="absolute inset-y-0 right-0 flex items-center pr-2 sm:pr-0">
             <button type="button" class="rounded-full text-stone-950 hover:bg-stone-600 hover:text-stone-50 p-2">
               <span class="sr-only">View notifications</span>
               <BellIcon class="h-6 w-6" aria-hidden="true" />
