@@ -23,7 +23,7 @@ const handleDiscloserButtonClick = (value) => {
     >
       <TopNavBar class="w-full" @open="handleDiscloserButtonClick"></TopNavBar>
 
-      <main class="py-20 px-20 relative ">
+      <main class="py-20 px-20 relative min-h-screen">
         <section class="relative isolate px-6 bg-white">
           <router-view></router-view>
         </section>

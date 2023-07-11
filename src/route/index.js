@@ -8,25 +8,25 @@ import Business from "../Pages/Business.vue";
 const routes = [
     // this is the default layou at the system, every layout inside children, will inherit this default layout
     {
-      path: '/',
-      redirect: 'dashboard'
+      path: '/vue3-tailwind-sidebarlayout/',
+      redirect: '/vue3-tailwind-sidebarlayout/dashboard'
     },{
-      path: '/icons',
+      path: '/vue3-tailwind-sidebarlayout/icons',
       name: 'Icons',
       component: Icons,
     },
     {
-      path: '/profile',
+      path: '/vue3-tailwind-sidebarlayout/profile',
       name: 'Profile',
       component: Profile,
     } ,
     {
-      path: '/dashboard',
+      path: '/vue3-tailwind-sidebarlayout/dashboard',
       name: 'Dashboard',
       component: Dashboard,
     } ,
     {
-      path: '/business',
+      path: '/vue3-tailwind-sidebarlayout/business',
       name: 'Business',
       component: Business,
     } 
