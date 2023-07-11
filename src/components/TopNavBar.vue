@@ -1,11 +1,11 @@
 <template>
-    <Disclosure as="nav" class="bg-stone-100 border-b border-stone-200" v-slot="{ open }">
-      <div class="mx-auto w-full px-0 bg-stone-200 ">
+    <Disclosure as="nav" class="bg-stone-100 px-5 border-b border-stone-200" v-slot="{ open }">
+      <div class="mx-auto w-full px-0">
         <div class="relative flex h-16 items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center">
             <!-- Mobile menu button-->
             <!-- web button -->
-            <DisclosureButton @click="handleDisclosureButtonClick(open)" class="inline-flex items-center justify-center rounded-md p-2 text-stone-950 hover:bg-stone-600 hover:text-stone-50">
+            <DisclosureButton @click="handleDisclosureButtonClick(open)" class="inline-flex items-center justify-center rounded-md p-2 text-stone-950 hover:bg-stone-600 hover:text-stone-50 ml-4">
               <span class="sr-only">Open main menu</span>
               <Bars3Icon v-if="!open" class="hidden md:block lg:block h-6 w-6" aria-hidden="true" />
               <XMarkIcon v-else class="hidden md:block lg:block h-6 w-6" aria-hidden="true" />

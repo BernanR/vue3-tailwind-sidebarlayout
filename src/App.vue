@@ -18,14 +18,16 @@ const handleDiscloserButtonClick = (value) => {
      
     <!-- No mobile o menu tipo icone deve ser ativado, mostra o mesmo menu no mobile -->
     <!--  -->
-    <div class="flex-1 bg-stone-50 transition-margin ease-in-out duration-300" 
+    <div class="flex-1 bg-white transition-margin ease-in-out duration-300" 
         :class="sidebarOpen ? 'md:ml-[256px] lg:ml-[256px] ml-[10rem]' : 'ml-0 lg:ml-[3.6rem] md:ml-[3.6rem]'"
     >
-      <TopNavBar class="w-full fixed z-40" @open="handleDiscloserButtonClick"></TopNavBar>
+      <TopNavBar class="w-full" @open="handleDiscloserButtonClick"></TopNavBar>
 
-      <section class="p-10">
-        <router-view></router-view>
-      </section>
+      <main class="py-20 px-20 relative ">
+        <section class="relative isolate px-6 bg-white">
+          <router-view></router-view>
+        </section>
+      </main>
 
     </div>
   </div>

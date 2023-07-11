@@ -37,21 +37,20 @@ const menuItems = ref([
                     active-class="text-stone-600 bg-stone-50"                    
                     class="
                     flex items-center 
+                    text-md 
                     mb-1 
                     py-2 
                     px-5 
                     md:py-4 
                     md:px-8 
-                    lg:px-8 
-                    text-md 
+                    lg:px-10 
                     md:text-lg 
                     lg:text-lg"
 
                     :class="{
                     'md:rounded lg:rounded md:hover:bg-stone-600 md:hover:text-stone-50 lg:hover:bg-stone-600 lg:hover:text-stone-50' : !isIconMode,
                     'md:bg-stone-600 md:text-stone-100 lg:bg-stone-600 lg:text-stone-100 bg-stone-50' : (item.active && !isIconMode), 
-                    '' : (item.active && isIconMode),
-                    'w-0 md:pr-[4.5rem] lg:pr-[4.5rem] hover:text-stone-600 hover:bg-stone-50' : isIconMode
+                    'w-0 md:pr-[4.5rem] lg:pr-[2.5rem] hover:text-stone-600 hover:bg-stone-50' : isIconMode
                 }"
                     >
                     <i class="icon mr-5" :class="item.icon"></i>

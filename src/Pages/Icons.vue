@@ -1,6 +1,6 @@
 <template>
     <div id="icons-wrapper">
-    <section class="w-full max-w-lg" id="arrows">
+    <section class="w-full max-w-lg " id="arrows">
       <h2 class="w-full max-w-lg float-left mt-10">Arrows</h2>
         <div class="">
         <div class="shadow-lg float-left mr-2">  

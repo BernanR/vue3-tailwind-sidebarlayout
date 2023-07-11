@@ -8,6 +8,9 @@ import Business from "../Pages/Business.vue";
 const routes = [
     // this is the default layou at the system, every layout inside children, will inherit this default layout
     {
+      path: '/',
+      redirect: 'dashboard'
+    },{
       path: '/icons',
       name: 'Icons',
       component: Icons,
